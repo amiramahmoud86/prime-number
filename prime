@@ -1,0 +1,17 @@
+#26 prime numbers can't divide only for itself
+flag = False
+
+for i in range (1,101) :
+  if i == 0 or i == 1:
+    print(i, "is not a prime number")
+  elif i > 1:
+    for j in range (2,i):
+      if i%j==0 and i!=j:
+        flag = True
+       # print(i, "is not a prime number")
+        break
+      else :
+        flag = False
+    if flag == False:
+      print(i, "is a prime number")
+    flag = False
